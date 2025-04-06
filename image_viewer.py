@@ -11,8 +11,8 @@ def main():
     if uploaded_file is not None:
         try:
             image = Image.open(uploaded_file)
-st.image(image, caption="Uploaded Image.", use_container_width=True)
-except Exception as e:
+            st.image(image, caption="Uploaded Image.", use_container_width=True) # Changed line here!
+        except Exception as e:
             st.error(f"An error occurred: {e}")
             st.error("Please upload a valid image file.")
 
